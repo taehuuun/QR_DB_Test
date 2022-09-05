@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "164215284046",
+    "project_id": "qrdb-86eb1",
+    "storage_bucket": "qrdb-86eb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164215284046:android:c397ad0b965d6514797e1f",
+        "android_client_info": {
+          "package_name": "com.lth.qrdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164215284046-siermnpn15jqjukjmvtdcjgen6pvqh45.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoqIjnLr8lBqWZiw6uuSbqp9YqYebBUjE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164215284046-siermnpn15jqjukjmvtdcjgen6pvqh45.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
