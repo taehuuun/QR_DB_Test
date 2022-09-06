@@ -10,7 +10,9 @@ public class DataManager : MonoBehaviour
     [SerializeField] private UI ui;
     private static DataManager ins;
 
-    private string testQRData = "AAsad123sadDa123";
+    [SerializeField] private string testQRData = "AA.sad123sadDa123";
+    [SerializeField] private string type = "";
+    [SerializeField] private string cryptoData = "";
 
     private FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
 
@@ -58,22 +60,24 @@ public class DataManager : MonoBehaviour
         if(QRData == null || QRData.Length < 2)
             return false;
 
-        string modelType = QRData.Substring(0,2);
-        string cryptoData = QRData.Substring(2,QRData.Length);
+        string[] tmpData = QRData.Split('.');
 
-        DocumentReference docRef = db.Collection(modelType).Document(cryptoData);
+        type = tmpData[0];
+        cryptoData = tmpData[1];
+
+        DocumentReference docRef = db.Collection(type).Document(cryptoData);
         docRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
         {
             DocumentSnapshot snapshot = task.Result;
 
             if(snapshot.Exists)
             {
-                ui.statusText.text = $"QRData | type : {modelType} crptoData : {cryptoData} Data is valid";
+                ui.statusText.text = $"QRData | type : {type} crptoData : {cryptoData} Data is valid";
                 return true;
             }
             else
             {
-                ui.statusText.text = $"QRData | type : {modelType} crptoData : {cryptoData} Data is Not valid";
+                ui.statusText.text = $"QRData | type : {type} crptoData : {cryptoData} Data is Not valid";
                 return false;
             }
         });
