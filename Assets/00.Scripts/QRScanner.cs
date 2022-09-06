@@ -17,7 +17,6 @@ public class QRScanner : MonoBehaviour
         camTexture = new WebCamTexture();
         camTexture.requestedHeight = Screen.height;
         camTexture.requestedWidth = Screen.width;
-        screenRect = new Rect(0,0,Screen.width,Screen.height);
 
         if(camTexture != null)
         {
