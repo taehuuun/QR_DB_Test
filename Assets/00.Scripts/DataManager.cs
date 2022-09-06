@@ -66,12 +66,12 @@ public class DataManager : MonoBehaviour
 
             if(snapshot.Exists)
             {
-                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} 데이터가 유효합니다");
+                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} Data is valid");
                 return true;
             }
             else
             {
-                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} 유효한 데이터가 아닙니다");
+                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} Data is Not valid");
                 return false;
             }
         });
