@@ -28,7 +28,7 @@ public class DataManager : MonoBehaviour
 
     private void Awake()
     {
-        #region ½Ì±ÛÅæ 
+        #region ì‹±ê¸€í†¤ 
         if(ins == null)
         {
             ins = this;
@@ -47,12 +47,12 @@ public class DataManager : MonoBehaviour
     }
 
     /// <summary>
-    /// QRµ¥ÀÌÅÍ°¡ DB³»¿¡ ÀÖ´Â µ¥ÀÌÅÍÀÎÁö °Ë»ç
+    /// QRë°ì´í„°ê°€ DBë‚´ì— ìˆëŠ” ë°ì´í„°ì¸ì§€ ê²€ì‚¬
     /// </summary>
-    /// <param name="QRData">QRÄÚµåÀÇ µ¥ÀÌÅÍ</param>
+    /// <param name="QRData">QRì½”ë“œì˜ ë°ì´í„°</param>
     private bool QRDataValidation(string QRData)
     {
-        // µ¥ÀÌÅÍ°¡ nullÀÌ°Å³ª ±æÀÌ°¡ 2º¸´Ù ÀÛÀº°æ¿ì ÇÔ¼ö Á¾·á
+        // ë°ì´í„°ê°€ nullì´ê±°ë‚˜ ê¸¸ì´ê°€ 2ë³´ë‹¤ ì‘ì€ê²½ìš° í•¨ìˆ˜ ì¢…ë£Œ
         if(QRData == null || QRData.Length < 2)
             return false;
 
@@ -66,12 +66,12 @@ public class DataManager : MonoBehaviour
 
             if(snapshot.Exists)
             {
-                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} µ¥ÀÌÅÍ°¡ À¯È¿ÇÕ´Ï´Ù");
+                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} ë°ì´í„°ê°€ ìœ íš¨í•©ë‹ˆë‹¤");
                 return true;
             }
             else
             {
-                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} À¯È¿ÇÑ µ¥ÀÌÅÍ°¡ ¾Æ´Õ´Ï´Ù");
+                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} ìœ íš¨í•œ ë°ì´í„°ê°€ ì•„ë‹™ë‹ˆë‹¤");
                 return false;
             }
         });
