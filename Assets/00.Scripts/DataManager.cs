@@ -41,6 +41,11 @@ public class DataManager : MonoBehaviour
     
     }
 
+    private void Start()
+    {
+        QRDataValidation(testQRData);
+    }
+
     /// <summary>
     /// QR데이터가 DB내에 있는 데이터인지 검사
     /// </summary>
