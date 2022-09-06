@@ -18,7 +18,7 @@ public class DataManager : MonoBehaviour
     
 
     private FirebaseFirestore db;
-    private Data data;
+    public Data data = new Data();
 
     public static DataManager Ins
     {
@@ -102,21 +102,43 @@ public class DataManager : MonoBehaviour
     {
         Debug.Log("Start LoadData Func");
         DocumentReference docRef = db.Collection(type).Document(cryptoData);
-        docRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>{
-           DocumentSnapshot snapshot = task.Result; 
+        docRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
+        {
+            DocumentSnapshot snapshot = task.Result; 
+
+            Debug.Log("!!!!!!!!!!!!!!!!!!!");
 
             if(snapshot.Exists)
             {
+                Debug.Log("@@@@@@@@@@@@@@@@@");
                 Dictionary<string, object> loadData = snapshot.ToDictionary();
+
+                Debug.Log(loadData.Count);
+
+                Debug.Log($"===========================================");
+
+                Debug.Log($"DB Data: ");
+                Debug.Log($"birth : {loadData["Birth"].ToString()} ");
+                Debug.Log($"modelID : {loadData["ModelID"].ToString()} ");
+                Debug.Log($"nickName : {loadData["NickName"].ToString()} ");
+                Debug.Log($"clean : {loadData["Clean"].ToString()} ");
+                Debug.Log($"health : {loadData["Health"].ToString()} ");
+                Debug.Log($"size : {loadData["Size"].ToString()} ");
+                Debug.Log($"effectVal : {loadData["EffectVal"].ToString()} ");
+                Debug.Log($"modelProdOrder : {loadData["ModelProdOrder"].ToString()} ");
+                
+                Debug.Log(data);
 
                 data.birth = loadData["Birth"].ToString();
                 data.modelID = loadData["ModelID"].ToString();
                 data.nickName = loadData["NickName"].ToString();
-                data.clean = float.Parse(loadData["Clean"].ToString());
-                data.health = float.Parse(loadData["Health"].ToString());
-                data.size = float.Parse(loadData["Size"].ToString());
+                data.clean = loadData["Clean"].ToString();
+                data.health = loadData["Health"].ToString();
+                data.size = loadData["Size"].ToString();
                 data.effectVal = int.Parse(loadData["EffectVal"].ToString());
-                data.modelProdOrder = int.Parse(loadData["ModelPordOrder"].ToString());
+                data.modelProdOrder = int.Parse(loadData["ModelProdOrder"].ToString());
+                
+                Debug.Log($"===========================================");
 
                 Debug.Log($"Data: ");
                 Debug.Log($"birth : {data.birth} ");
