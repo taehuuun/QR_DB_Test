@@ -6,4 +6,5 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
+    public TMP_Text statusText;
 }
