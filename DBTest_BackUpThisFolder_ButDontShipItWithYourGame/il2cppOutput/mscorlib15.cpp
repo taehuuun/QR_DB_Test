@@ -605,11 +605,11 @@ struct Il2CppArrayBounds;
 struct Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B  : public RuntimeObject
 {
 	// System.Int32 System.Globalization.Calendar::m_currentEraValue
-	int32_t ___m_currentEraValue_0;
+	int32_t ___m_currentEraValue_38;
 	// System.Boolean System.Globalization.Calendar::m_isReadOnly
-	bool ___m_isReadOnly_1;
+	bool ___m_isReadOnly_39;
 	// System.Int32 System.Globalization.Calendar::twoDigitYearMax
-	int32_t ___twoDigitYearMax_2;
+	int32_t ___twoDigitYearMax_41;
 };
 
 // System.Globalization.CalendarData
@@ -1260,11 +1260,6 @@ struct SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37  : public Run
 	bool ___requireSameTokenInPartialTrust_14;
 };
 
-// System.Globalization.SortVersion
-struct SortVersion_tBB62978F95905541FC817E11F73A0B1DB392F07E  : public RuntimeObject
-{
-};
-
 // System.String
 struct String_t  : public RuntimeObject
 {
@@ -1428,17 +1423,50 @@ struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
 struct GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815  : public Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B
 {
 	// System.Globalization.GregorianCalendarTypes System.Globalization.GregorianCalendar::m_type
-	int32_t ___m_type_3;
+	int32_t ___m_type_42;
 };
 
 struct GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields
 {
 	// System.Int32[] System.Globalization.GregorianCalendar::DaysToMonth365
-	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___DaysToMonth365_4;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___DaysToMonth365_43;
 	// System.Int32[] System.Globalization.GregorianCalendar::DaysToMonth366
-	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___DaysToMonth366_5;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___DaysToMonth366_44;
 	// System.Globalization.Calendar modreq(System.Runtime.CompilerServices.IsVolatile) System.Globalization.GregorianCalendar::s_defaultInstance
-	Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* ___s_defaultInstance_6;
+	Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* ___s_defaultInstance_45;
+};
+
+// System.Guid
+struct Guid_t 
+{
+	// System.Int32 System.Guid::_a
+	int32_t ____a_1;
+	// System.Int16 System.Guid::_b
+	int16_t ____b_2;
+	// System.Int16 System.Guid::_c
+	int16_t ____c_3;
+	// System.Byte System.Guid::_d
+	uint8_t ____d_4;
+	// System.Byte System.Guid::_e
+	uint8_t ____e_5;
+	// System.Byte System.Guid::_f
+	uint8_t ____f_6;
+	// System.Byte System.Guid::_g
+	uint8_t ____g_7;
+	// System.Byte System.Guid::_h
+	uint8_t ____h_8;
+	// System.Byte System.Guid::_i
+	uint8_t ____i_9;
+	// System.Byte System.Guid::_j
+	uint8_t ____j_10;
+	// System.Byte System.Guid::_k
+	uint8_t ____k_11;
+};
+
+struct Guid_t_StaticFields
+{
+	// System.Guid System.Guid::Empty
+	Guid_t ___Empty_0;
 };
 
 // System.Globalization.HebrewNumberParsingContext
@@ -1509,17 +1537,17 @@ struct StreamingContext_t56760522A751890146EE45F82F866B55B7E33677_marshaled_com
 struct TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A 
 {
 	// System.Int64 System.TimeSpan::_ticks
-	int64_t ____ticks_3;
+	int64_t ____ticks_22;
 };
 
 struct TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields
 {
 	// System.TimeSpan System.TimeSpan::Zero
-	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___Zero_0;
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___Zero_19;
 	// System.TimeSpan System.TimeSpan::MaxValue
-	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___MaxValue_1;
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___MaxValue_20;
 	// System.TimeSpan System.TimeSpan::MinValue
-	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___MinValue_2;
+	TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___MinValue_21;
 };
 
 // System.UInt32
@@ -1780,31 +1808,44 @@ struct RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B
 	intptr_t ___value_0;
 };
 
+// System.Globalization.SortVersion
+struct SortVersion_tBB62978F95905541FC817E11F73A0B1DB392F07E  : public RuntimeObject
+{
+	// System.Int32 System.Globalization.SortVersion::m_NlsVersion
+	int32_t ___m_NlsVersion_0;
+	// System.Guid System.Globalization.SortVersion::m_SortId
+	Guid_t ___m_SortId_1;
+};
+
 // System.Globalization.TextInfo
 struct TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4  : public RuntimeObject
 {
+	// System.String System.Globalization.TextInfo::m_listSeparator
+	String_t* ___m_listSeparator_0;
 	// System.Boolean System.Globalization.TextInfo::m_isReadOnly
-	bool ___m_isReadOnly_0;
+	bool ___m_isReadOnly_1;
 	// System.String System.Globalization.TextInfo::m_cultureName
-	String_t* ___m_cultureName_1;
+	String_t* ___m_cultureName_2;
 	// System.Globalization.CultureData System.Globalization.TextInfo::m_cultureData
-	CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D* ___m_cultureData_2;
+	CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D* ___m_cultureData_3;
 	// System.String System.Globalization.TextInfo::m_textInfoName
-	String_t* ___m_textInfoName_3;
+	String_t* ___m_textInfoName_4;
 	// System.Nullable`1<System.Boolean> System.Globalization.TextInfo::m_IsAsciiCasingSameAsInvariant
-	Nullable_1_t78F453FADB4A9F50F267A4E349019C34410D1A01 ___m_IsAsciiCasingSameAsInvariant_4;
+	Nullable_1_t78F453FADB4A9F50F267A4E349019C34410D1A01 ___m_IsAsciiCasingSameAsInvariant_5;
 	// System.String System.Globalization.TextInfo::customCultureName
-	String_t* ___customCultureName_6;
+	String_t* ___customCultureName_7;
+	// System.Int32 System.Globalization.TextInfo::m_nDataItem
+	int32_t ___m_nDataItem_8;
 	// System.Boolean System.Globalization.TextInfo::m_useUserOverride
-	bool ___m_useUserOverride_7;
+	bool ___m_useUserOverride_9;
 	// System.Int32 System.Globalization.TextInfo::m_win32LangID
-	int32_t ___m_win32LangID_8;
+	int32_t ___m_win32LangID_10;
 };
 
 struct TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4_StaticFields
 {
 	// System.Globalization.TextInfo modreq(System.Runtime.CompilerServices.IsVolatile) System.Globalization.TextInfo::s_Invariant
-	TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* ___s_Invariant_5;
+	TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4* ___s_Invariant_6;
 };
 
 // System.Globalization.TimeSpanFormat
@@ -20533,8 +20574,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Calendar__ctor_mCA44DC39A700EAA06125E40215800356CDDFA65D (Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* __this, const RuntimeMethod* method) 
 {
 	{
-		__this->___m_currentEraValue_0 = (-1);
-		__this->___twoDigitYearMax_2 = (-1);
+		__this->___m_currentEraValue_38 = (-1);
+		__this->___twoDigitYearMax_41 = (-1);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
 	}
@@ -20578,7 +20619,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Calendar_SetReadOnlyState_mA26373A96C860
 {
 	{
 		bool L_0 = ___readOnly0;
-		__this->___m_isReadOnly_1 = L_0;
+		__this->___m_isReadOnly_39 = L_0;
 		return;
 	}
 }
@@ -20592,7 +20633,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Calendar_get_CurrentEraValue_m04A360E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		int32_t L_0 = __this->___m_currentEraValue_0;
+		int32_t L_0 = __this->___m_currentEraValue_38;
 		if ((!(((uint32_t)L_0) == ((uint32_t)(-1)))))
 		{
 			goto IL_001f;
@@ -20606,12 +20647,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Calendar_get_CurrentEraValue_m04A360E
 		L_2 = CalendarData_GetCalendarData_m5E3A34CA03C3173E70CDADF1D43F1B0D68E7E5E4(L_1, NULL);
 		NullCheck(L_2);
 		int32_t L_3 = L_2->___iCurrentEra_18;
-		__this->___m_currentEraValue_0 = L_3;
+		__this->___m_currentEraValue_38 = L_3;
 	}
 
 IL_001f:
 	{
-		int32_t L_4 = __this->___m_currentEraValue_0;
+		int32_t L_4 = __this->___m_currentEraValue_38;
 		return L_4;
 	}
 }
@@ -20784,7 +20825,7 @@ IL_0021:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Calendar_get_TwoDigitYearMax_m0C4E57AAB1EB93565602DCAC0BA1BD2B5B97A4BA (Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* __this, const RuntimeMethod* method) 
 {
 	{
-		int32_t L_0 = __this->___twoDigitYearMax_2;
+		int32_t L_0 = __this->___twoDigitYearMax_41;
 		return L_0;
 	}
 }
@@ -22995,26 +23036,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CalendarData_fill_calendar_data_m60932F2
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GregorianCalendar_OnDeserialized_m1AD847DE7E1B662CB97A00645EEBB38D010BFFEA (GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815* __this, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 ___ctx0, const RuntimeMethod* method) 
 {
 	{
-		int32_t L_0 = __this->___m_type_3;
+		int32_t L_0 = __this->___m_type_42;
 		if (L_0)
 		{
 			goto IL_000f;
 		}
 	}
 	{
-		__this->___m_type_3 = 1;
+		__this->___m_type_42 = 1;
 	}
 
 IL_000f:
 	{
-		int32_t L_1 = __this->___m_type_3;
+		int32_t L_1 = __this->___m_type_42;
 		if ((((int32_t)L_1) < ((int32_t)1)))
 		{
 			goto IL_0022;
 		}
 	}
 	{
-		int32_t L_2 = __this->___m_type_3;
+		int32_t L_2 = __this->___m_type_42;
 		if ((((int32_t)L_2) <= ((int32_t)((int32_t)12))))
 		{
 			goto IL_0046;
@@ -23082,7 +23123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20D
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
-		Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* L_0 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___s_defaultInstance_6;
+		Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* L_0 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___s_defaultInstance_45;
 		il2cpp_codegen_memory_barrier();
 		if (L_0)
 		{
@@ -23095,14 +23136,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20D
 		GregorianCalendar__ctor_m084D332E973E4D1D9368868F30E107BC4EEA3713(L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
 		il2cpp_codegen_memory_barrier();
-		((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___s_defaultInstance_6 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___s_defaultInstance_6), (void*)L_1);
+		((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___s_defaultInstance_45 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___s_defaultInstance_45), (void*)L_1);
 	}
 
 IL_0015:
 	{
 		il2cpp_codegen_runtime_class_init_inline(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
-		Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* L_2 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___s_defaultInstance_6;
+		Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B* L_2 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___s_defaultInstance_45;
 		il2cpp_codegen_memory_barrier();
 		return L_2;
 	}
@@ -23160,7 +23201,7 @@ IL_000f:
 IL_003d:
 	{
 		int32_t L_11 = ___type0;
-		__this->___m_type_3 = L_11;
+		__this->___m_type_42 = L_11;
 		return;
 	}
 }
@@ -23168,7 +23209,7 @@ IL_003d:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendar_get_ID_mE041F9B4CF16C18B7FD79E8E802D1E6EB6FE68D2 (GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815* __this, const RuntimeMethod* method) 
 {
 	{
-		int32_t L_0 = __this->___m_type_3;
+		int32_t L_0 = __this->___m_type_42;
 		return L_0;
 	}
 }
@@ -23305,7 +23346,7 @@ IL_009a:
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_25 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth365_4;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_25 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth365_43;
 		G_B16_0 = L_25;
 		goto IL_00a8;
 	}
@@ -23313,7 +23354,7 @@ IL_009a:
 IL_00a3:
 	{
 		il2cpp_codegen_runtime_class_init_inline(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_26 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth366_5;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_26 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth366_44;
 		G_B16_0 = L_26;
 	}
 
@@ -23432,7 +23473,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t GregorianCalendar_GetAbsoluteDate_m43
 IL_0029:
 	{
 		il2cpp_codegen_runtime_class_init_inline(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_7 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth365_4;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_7 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth365_43;
 		G_B9_0 = L_7;
 		goto IL_0035;
 	}
@@ -23440,7 +23481,7 @@ IL_0029:
 IL_0030:
 	{
 		il2cpp_codegen_runtime_class_init_inline(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_8 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth366_5;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_8 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth366_44;
 		G_B9_0 = L_8;
 	}
 
@@ -23633,7 +23674,7 @@ IL_0065:
 IL_0079:
 	{
 		il2cpp_codegen_runtime_class_init_inline(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_20 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth365_4;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_20 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth365_43;
 		G_B13_0 = L_20;
 		goto IL_0085;
 	}
@@ -23641,7 +23682,7 @@ IL_0079:
 IL_0080:
 	{
 		il2cpp_codegen_runtime_class_init_inline(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var);
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_21 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth366_5;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_21 = ((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth366_44;
 		G_B13_0 = L_21;
 	}
 
@@ -24064,7 +24105,7 @@ IL_001c:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendar_get_TwoDigitYearMax_m37269BC1B780F9A24F8B889D3865C9FAC4A01874 (GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815* __this, const RuntimeMethod* method) 
 {
 	{
-		int32_t L_0 = ((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_2;
+		int32_t L_0 = ((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41;
 		if ((!(((uint32_t)L_0) == ((uint32_t)(-1)))))
 		{
 			goto IL_001f;
@@ -24075,12 +24116,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GregorianCalendar_get_TwoDigitYearMax
 		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 System.Globalization.Calendar::get_ID() */, __this);
 		int32_t L_2;
 		L_2 = Calendar_GetSystemTwoDigitYearSetting_mBA56944261CA5924319D54AAC19347884DEDD640(L_1, ((int32_t)2029), NULL);
-		((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_2 = L_2;
+		((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41 = L_2;
 	}
 
 IL_001f:
 	{
-		int32_t L_3 = ((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_2;
+		int32_t L_3 = ((Calendar_t0A117CC7532A54C17188C2EFEA1F79DB20DF3A3B*)__this)->___twoDigitYearMax_41;
 		return L_3;
 	}
 }
@@ -24154,14 +24195,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GregorianCalendar__cctor_m4EDBE5766DC8CF
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_1 = L_0;
 		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____5857EE4CE98BFABBD62B385C1098507DD0052FF3951043AAD6A1DABD495F18AA_26_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
-		((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth365_4 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth365_4), (void*)L_1);
+		((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth365_43 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth365_43), (void*)L_1);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_3 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)((int32_t)13));
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_4 = L_3;
 		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t9FFB0BEB067161CE52A63D5857FEA61F74F17A50____FADB218011E7702BB9575D0C32A685DA10B5C72EB809BD9A955DB1C76E4D8315_89_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_4, L_5, NULL);
-		((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth366_5 = L_4;
-		Il2CppCodeGenWriteBarrier((void**)(&((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth366_5), (void*)L_4);
+		((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth366_44 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&((GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_StaticFields*)il2cpp_codegen_static_fields_for(GregorianCalendar_t6CC2956C5298E69CE93FE53A9DF5AE4F33621815_il2cpp_TypeInfo_var))->___DaysToMonth366_44), (void*)L_4);
 		return;
 	}
 }
@@ -25751,7 +25792,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Calendar_SetReadOnlyState_mA
 {
 	{
 		bool L_0 = ___readOnly0;
-		__this->___m_isReadOnly_1 = L_0;
+		__this->___m_isReadOnly_39 = L_0;
 		return;
 	}
 }
@@ -25907,7 +25948,7 @@ IL_000d:
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int64_t TimeSpan_get_Ticks_mC50131E57621F29FACC53B3241432ABB874FA1B5_inline (TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* __this, const RuntimeMethod* method) 
 {
 	{
-		int64_t L_0 = __this->____ticks_3;
+		int64_t L_0 = __this->____ticks_22;
 		return L_0;
 	}
 }
@@ -25943,7 +25984,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TimeSpan__ctor_m061B122FA11D
 {
 	{
 		int64_t L_0 = ___ticks0;
-		__this->____ticks_3 = L_0;
+		__this->____ticks_22 = L_0;
 		return;
 	}
 }

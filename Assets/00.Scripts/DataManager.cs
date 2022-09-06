@@ -46,7 +46,6 @@ public class DataManager : MonoBehaviour
 
     private void Start()
     {
-        ui.statusText.text = "Wait...";
         QRDataValidation(testQRData);
     }
 
@@ -59,6 +58,7 @@ public class DataManager : MonoBehaviour
         // 데이터가 null이거나 길이가 2보다 작은경우 함수 종료
         if(QRData == null || QRData.Length < 2)
             return false;
+        
 
         string[] tmpData = QRData.Split('.');
 
@@ -72,12 +72,12 @@ public class DataManager : MonoBehaviour
 
             if(snapshot.Exists)
             {
-                ui.statusText.text = $"QRData | type : {type} crptoData : {cryptoData} Data is valid";
+                Debug.Log($"QRData | type : {type} crptoData : {cryptoData} Data is valid");
                 return true;
             }
             else
             {
-                ui.statusText.text = $"QRData | type : {type} crptoData : {cryptoData} Data is Not valid";
+                Debug.Log($"QRData | type : {type} crptoData : {cryptoData} Data is Not valid");
                 return false;
             }
         });
