@@ -7,6 +7,7 @@ using Firebase.Extensions;
 
 public class DataManager : MonoBehaviour
 {
+    [SerializeField] private UI ui;
     private static DataManager ins;
 
     private string testQRData = "AAsad123sadDa123";
@@ -66,12 +67,12 @@ public class DataManager : MonoBehaviour
 
             if(snapshot.Exists)
             {
-                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} Data is valid");
+                ui.statusText.text = $"QRData | type : {modelType} crptoData : {cryptoData} Data is valid";
                 return true;
             }
             else
             {
-                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} Data is Not valid");
+                ui.statusText.text = $"QRData | type : {modelType} crptoData : {cryptoData} Data is Not valid";
                 return false;
             }
         });
