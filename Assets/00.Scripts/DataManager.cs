@@ -14,7 +14,7 @@ public class DataManager : MonoBehaviour
     [SerializeField] private string type = "";
     [SerializeField] private string cryptoData = "";
 
-    private FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
+    private FirebaseFirestore db;
 
     public static DataManager Ins
     {
@@ -46,6 +46,7 @@ public class DataManager : MonoBehaviour
 
     private void Start()
     {
+        db = FirebaseFirestore.DefaultInstance;
         QRDataValidation(testQRData);
     }
 
