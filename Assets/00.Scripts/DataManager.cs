@@ -11,6 +11,8 @@ public class DataManager : MonoBehaviour
 
     private string testQRData = "AAsad123sadDa123";
 
+    private FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
+
     public static DataManager Ins
     {
         get
@@ -37,5 +39,37 @@ public class DataManager : MonoBehaviour
         }
         #endregion
     
+    }
+
+    /// <summary>
+    /// QR데이터가 DB내에 있는 데이터인지 검사
+    /// </summary>
+    /// <param name="QRData">QR코드의 데이터</param>
+    private bool QRDataValidation(string QRData)
+    {
+        // 데이터가 null이거나 길이가 2보다 작은경우 함수 종료
+        if(QRData == null || QRData.Length < 2)
+            return false;
+
+        string modelType = QRData.Substring(0,2);
+        string cryptoData = QRData.Substring(2,QRData.Length);
+
+        DocumentReference docRef = db.Collection(modelType).Document(cryptoData);
+        docRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
+        {
+            DocumentSnapshot snapshot = task.Result;
+
+            if(snapshot.Exists)
+            {
+                return true;
+            }
+            else
+            {
+                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} 유효한 데이터가 아닙니다");
+                return false;
+            }
+        });
+
+        return false;
     }
 }
