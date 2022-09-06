@@ -10,9 +10,9 @@ public class Data
     [FirestoreProperty] public int effectVal {get; set;}
     [FirestoreProperty] public int modelProdOrder {get; set;}
     [FirestoreProperty] public string birth {get; set;}
-    [FirestoreProperty] public string clean {get; set;}
-    [FirestoreProperty] public string health {get; set;}
+    [FirestoreProperty] public float clean {get; set;}
+    [FirestoreProperty] public float health {get; set;}
     [FirestoreProperty] public string modelID {get; set;}
     [FirestoreProperty] public string nickName {get; set;}
-    [FirestoreProperty] public string size {get; set;}
+    [FirestoreProperty] public float size {get; set;}
 }

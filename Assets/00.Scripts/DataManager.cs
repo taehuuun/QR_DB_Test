@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,11 @@ public class DataManager : MonoBehaviour
     [SerializeField] private string testQRData = "AA.sad123sadDa123";
     [SerializeField] private string type = "";
     [SerializeField] private string cryptoData = "";
+    [SerializeField] private const string DATE_STR = "yyyyMMddHHmmss";
+    
 
     private FirebaseFirestore db;
+    private Data data;
 
     public static DataManager Ins
     {
@@ -47,7 +51,10 @@ public class DataManager : MonoBehaviour
     private void Start()
     {
         db = FirebaseFirestore.DefaultInstance;
-        QRDataValidation(testQRData);
+        if(QRDataValidation(testQRData))
+        {
+            LoadData();
+        }
     }
 
     /// <summary>
@@ -72,7 +79,7 @@ public class DataManager : MonoBehaviour
         DocumentReference docRef = db.Collection(type).Document(cryptoData);
 
         Debug.Log($"docRef : {docRef}");
-        
+
         docRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
         {
             DocumentSnapshot snapshot = task.Result;
@@ -90,5 +97,41 @@ public class DataManager : MonoBehaviour
         });
 
         return false;
+    }
+
+    private void LoadData()
+    {
+        DocumentReference docRef = db.Collection(type).Document(cryptoData);
+        docRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>{
+           DocumentSnapshot snapshot = task.Result; 
+
+            if(snapshot.Exists)
+            {
+                Dictionary<string, object> loadData = snapshot.ToDictionary();
+
+                data.birth = loadData["Birth"].ToString();
+                data.modelID = loadData["ModelID"].ToString();
+                data.nickName = loadData["NickName"].ToString();
+                data.clean = float.Parse(loadData["Clean"].ToString());
+                data.health = float.Parse(loadData["Health"].ToString());
+                data.size = float.Parse(loadData["Size"].ToString());
+                data.effectVal = int.Parse(loadData["EffectVal"].ToString());
+                data.modelProdOrder = int.Parse(loadData["ModelPordOrder"].ToString());
+
+                Debug.Log($"Data: ");
+                Debug.Log($"birth : {data.birth} ");
+                Debug.Log($"modelID : {data.modelID} ");
+                Debug.Log($"nickName : {data.nickName} ");
+                Debug.Log($"clean : {data.clean} ");
+                Debug.Log($"health : {data.health} ");
+                Debug.Log($"size : {data.size} ");
+                Debug.Log($"effectVal : {data.effectVal} ");
+                Debug.Log($"modelProdOrder : {data.modelProdOrder} ");
+            }
+            else
+            {
+                Debug.Log("해당하는 데이터를 로드하지 못했습니다"); 
+            }
+        });
     }
 }
