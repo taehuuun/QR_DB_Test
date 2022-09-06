@@ -44,6 +44,7 @@ public class DataManager : MonoBehaviour
 
     private void Start()
     {
+        ui.statusText.text = "Wait...";
         QRDataValidation(testQRData);
     }
 
