@@ -66,6 +66,7 @@ public class DataManager : MonoBehaviour
 
             if(snapshot.Exists)
             {
+                Debug.Log($"QRData | type : {modelType} crptoData : {cryptoData} 데이터가 유효합니다");
                 return true;
             }
             else
