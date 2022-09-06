@@ -9,6 +9,8 @@ public class DataManager : MonoBehaviour
 {
     private static DataManager ins;
 
+    private string testQRData = "AAsad123sadDa123";
+
     public static DataManager Ins
     {
         get
