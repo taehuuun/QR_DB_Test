@@ -66,7 +66,13 @@ public class DataManager : MonoBehaviour
         type = tmpData[0];
         cryptoData = tmpData[1];
 
+        Debug.Log($"Type : {type}");
+        Debug.Log($"cryptoData : {cryptoData}");
+
         DocumentReference docRef = db.Collection(type).Document(cryptoData);
+
+        Debug.Log($"docRef : {docRef}");
+        
         docRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>
         {
             DocumentSnapshot snapshot = task.Result;
