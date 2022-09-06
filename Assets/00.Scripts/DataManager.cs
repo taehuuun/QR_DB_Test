@@ -51,10 +51,8 @@ public class DataManager : MonoBehaviour
     private void Start()
     {
         db = FirebaseFirestore.DefaultInstance;
-        if(QRDataValidation(testQRData))
-        {
-            LoadData();
-        }
+
+        QRDataValidation(testQRData);
     }
 
     /// <summary>
@@ -87,6 +85,7 @@ public class DataManager : MonoBehaviour
             if(snapshot.Exists)
             {
                 Debug.Log($"QRData | type : {type} crptoData : {cryptoData} Data is valid");
+                LoadData();
                 return true;
             }
             else
@@ -101,6 +100,7 @@ public class DataManager : MonoBehaviour
 
     private void LoadData()
     {
+        Debug.Log("Start LoadData Func");
         DocumentReference docRef = db.Collection(type).Document(cryptoData);
         docRef.GetSnapshotAsync().ContinueWithOnMainThread(task =>{
            DocumentSnapshot snapshot = task.Result; 

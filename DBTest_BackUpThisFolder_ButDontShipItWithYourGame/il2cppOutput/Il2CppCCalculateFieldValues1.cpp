@@ -452,6 +452,8 @@ struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3;
 struct ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB;
 // System.Globalization.CultureInfo
 struct CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0;
+// Data
+struct Data_tD68044ADE8612868F3B424B065920F50C65B5CCE;
 // Firebase.Dispatcher
 struct Dispatcher_tBD1370511B5D6C10B211FBD3AF8E4F9D6B3CD8C6;
 // Firebase.Firestore.DocumentChangeProxy
@@ -1123,16 +1125,16 @@ struct Data_tD68044ADE8612868F3B424B065920F50C65B5CCE  : public RuntimeObject
 	int32_t ___U3CmodelProdOrderU3Ek__BackingField_1;
 	// System.String Data::<birth>k__BackingField
 	String_t* ___U3CbirthU3Ek__BackingField_2;
-	// System.String Data::<clean>k__BackingField
-	String_t* ___U3CcleanU3Ek__BackingField_3;
-	// System.String Data::<health>k__BackingField
-	String_t* ___U3ChealthU3Ek__BackingField_4;
+	// System.Single Data::<clean>k__BackingField
+	float ___U3CcleanU3Ek__BackingField_3;
+	// System.Single Data::<health>k__BackingField
+	float ___U3ChealthU3Ek__BackingField_4;
 	// System.String Data::<modelID>k__BackingField
 	String_t* ___U3CmodelIDU3Ek__BackingField_5;
 	// System.String Data::<nickName>k__BackingField
 	String_t* ___U3CnickNameU3Ek__BackingField_6;
-	// System.String Data::<size>k__BackingField
-	String_t* ___U3CsizeU3Ek__BackingField_7;
+	// System.Single Data::<size>k__BackingField
+	float ___U3CsizeU3Ek__BackingField_7;
 };
 
 // Firebase.Platform.DebugLogger
@@ -9912,7 +9914,9 @@ struct DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275  : public MonoBehav
 	// System.String DataManager::cryptoData
 	String_t* ___cryptoData_8;
 	// Firebase.Firestore.FirebaseFirestore DataManager::db
-	FirebaseFirestore_tAF16CB8787D9068C20C4BDC6D61F35AD0AF723A8* ___db_9;
+	FirebaseFirestore_tAF16CB8787D9068C20C4BDC6D61F35AD0AF723A8* ___db_10;
+	// Data DataManager::data
+	Data_tD68044ADE8612868F3B424B065920F50C65B5CCE* ___data_11;
 };
 
 struct DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275_StaticFields
@@ -11523,9 +11527,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3507[24] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3510[8] = 
 {
 	static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CeffectValU3Ek__BackingField_0)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CmodelProdOrderU3Ek__BackingField_1)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CbirthU3Ek__BackingField_2)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CcleanU3Ek__BackingField_3)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3ChealthU3Ek__BackingField_4)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CmodelIDU3Ek__BackingField_5)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CnickNameU3Ek__BackingField_6)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CsizeU3Ek__BackingField_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3511[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3511[8] = 
 {
-	static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___ui_4)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275_StaticFields, ___ins_5)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___testQRData_6)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___type_7)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___cryptoData_8)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___db_9)),};
+	static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___ui_4)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275_StaticFields, ___ins_5)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___testQRData_6)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___type_7)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___cryptoData_8)),0,static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___db_10)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___data_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3512[1] = 
 {
 	static_cast<int32_t>(offsetof(UI_t16DF663EF61FBCB2402111DB12E3091C775B4539, ___statusText_4)),};

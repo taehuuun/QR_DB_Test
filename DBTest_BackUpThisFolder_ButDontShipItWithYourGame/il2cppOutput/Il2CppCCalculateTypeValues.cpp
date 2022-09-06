@@ -1832,6 +1832,8 @@ struct CultureAwareComparer_t5822A6535A6EB4C448D1B7736067D1188BAEE8CD;
 struct CultureData_tEEFDCF4ECA1BBF6C0C8C94EB3541657245598F9D;
 // System.Globalization.CultureInfo
 struct CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0;
+// Data
+struct Data_tD68044ADE8612868F3B424B065920F50C65B5CCE;
 // System.Globalization.DateTimeFormatInfo
 struct DateTimeFormatInfo_t0457520F9FA7B5C8EAAEB3AD50413B6AEEB7458A;
 // System.Text.Decoder
@@ -6017,16 +6019,16 @@ struct Data_tD68044ADE8612868F3B424B065920F50C65B5CCE  : public RuntimeObject
 	int32_t ___U3CmodelProdOrderU3Ek__BackingField_1;
 	// System.String Data::<birth>k__BackingField
 	String_t* ___U3CbirthU3Ek__BackingField_2;
-	// System.String Data::<clean>k__BackingField
-	String_t* ___U3CcleanU3Ek__BackingField_3;
-	// System.String Data::<health>k__BackingField
-	String_t* ___U3ChealthU3Ek__BackingField_4;
+	// System.Single Data::<clean>k__BackingField
+	float ___U3CcleanU3Ek__BackingField_3;
+	// System.Single Data::<health>k__BackingField
+	float ___U3ChealthU3Ek__BackingField_4;
 	// System.String Data::<modelID>k__BackingField
 	String_t* ___U3CmodelIDU3Ek__BackingField_5;
 	// System.String Data::<nickName>k__BackingField
 	String_t* ___U3CnickNameU3Ek__BackingField_6;
-	// System.String Data::<size>k__BackingField
-	String_t* ___U3CsizeU3Ek__BackingField_7;
+	// System.Single Data::<size>k__BackingField
+	float ___U3CsizeU3Ek__BackingField_7;
 };
 
 // UnityEngine.Sprites.DataUtility
@@ -49922,7 +49924,9 @@ struct DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275  : public MonoBehav
 	// System.String DataManager::cryptoData
 	String_t* ___cryptoData_8;
 	// Firebase.Firestore.FirebaseFirestore DataManager::db
-	FirebaseFirestore_tAF16CB8787D9068C20C4BDC6D61F35AD0AF723A8* ___db_9;
+	FirebaseFirestore_tAF16CB8787D9068C20C4BDC6D61F35AD0AF723A8* ___db_10;
+	// Data DataManager::data
+	Data_tD68044ADE8612868F3B424B065920F50C65B5CCE* ___data_11;
 };
 
 struct DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275_StaticFields
