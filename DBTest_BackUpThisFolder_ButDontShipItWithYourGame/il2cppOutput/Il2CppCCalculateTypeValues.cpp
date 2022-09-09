@@ -55217,16 +55217,14 @@ struct DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275  : public MonoBehav
 {
 	// UI DataManager::ui
 	UI_t16DF663EF61FBCB2402111DB12E3091C775B4539* ___ui_4;
-	// System.String DataManager::testQRData
-	String_t* ___testQRData_6;
 	// System.String DataManager::type
-	String_t* ___type_7;
+	String_t* ___type_6;
 	// System.String DataManager::cryptoData
-	String_t* ___cryptoData_8;
+	String_t* ___cryptoData_7;
 	// Firebase.Firestore.FirebaseFirestore DataManager::db
-	FirebaseFirestore_tAF16CB8787D9068C20C4BDC6D61F35AD0AF723A8* ___db_10;
+	FirebaseFirestore_tAF16CB8787D9068C20C4BDC6D61F35AD0AF723A8* ___db_9;
 	// Data DataManager::data
-	Data_tD68044ADE8612868F3B424B065920F50C65B5CCE* ___data_11;
+	Data_tD68044ADE8612868F3B424B065920F50C65B5CCE* ___data_10;
 };
 
 struct DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275_StaticFields
@@ -55521,8 +55519,8 @@ struct QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72  : public MonoBehavio
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___screenRect_5;
 	// UnityEngine.WebCamTexture QRScanner::camTexture
 	WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749* ___camTexture_6;
-	// System.String QRScanner::cryptoData
-	String_t* ___cryptoData_7;
+	// System.String QRScanner::readQRData
+	String_t* ___readQRData_7;
 };
 
 // UnityEngine.UIElements.RadioButtonGroup

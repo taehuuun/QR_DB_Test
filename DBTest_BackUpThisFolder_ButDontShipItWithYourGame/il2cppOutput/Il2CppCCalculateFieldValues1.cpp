@@ -11975,16 +11975,14 @@ struct DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275  : public MonoBehav
 {
 	// UI DataManager::ui
 	UI_t16DF663EF61FBCB2402111DB12E3091C775B4539* ___ui_4;
-	// System.String DataManager::testQRData
-	String_t* ___testQRData_6;
 	// System.String DataManager::type
-	String_t* ___type_7;
+	String_t* ___type_6;
 	// System.String DataManager::cryptoData
-	String_t* ___cryptoData_8;
+	String_t* ___cryptoData_7;
 	// Firebase.Firestore.FirebaseFirestore DataManager::db
-	FirebaseFirestore_tAF16CB8787D9068C20C4BDC6D61F35AD0AF723A8* ___db_10;
+	FirebaseFirestore_tAF16CB8787D9068C20C4BDC6D61F35AD0AF723A8* ___db_9;
 	// Data DataManager::data
-	Data_tD68044ADE8612868F3B424B065920F50C65B5CCE* ___data_11;
+	Data_tD68044ADE8612868F3B424B065920F50C65B5CCE* ___data_10;
 };
 
 struct DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275_StaticFields
@@ -12056,8 +12054,8 @@ struct QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72  : public MonoBehavio
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___screenRect_5;
 	// UnityEngine.WebCamTexture QRScanner::camTexture
 	WebCamTexture_t2021D179149C925AA6D73E6F1898C8D46521C749* ___camTexture_6;
-	// System.String QRScanner::cryptoData
-	String_t* ___cryptoData_7;
+	// System.String QRScanner::readQRData
+	String_t* ___readQRData_7;
 };
 
 // TMPro.Examples.ShaderPropAnimator
@@ -14996,12 +14994,12 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3865[24] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3868[8] = 
 {
 	static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CeffectValU3Ek__BackingField_0)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CmodelProdOrderU3Ek__BackingField_1)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CbirthU3Ek__BackingField_2)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CcleanU3Ek__BackingField_3)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3ChealthU3Ek__BackingField_4)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CmodelIDU3Ek__BackingField_5)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CnickNameU3Ek__BackingField_6)),static_cast<int32_t>(offsetof(Data_tD68044ADE8612868F3B424B065920F50C65B5CCE, ___U3CsizeU3Ek__BackingField_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3869[8] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3869[7] = 
 {
-	static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___ui_4)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275_StaticFields, ___ins_5)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___testQRData_6)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___type_7)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___cryptoData_8)),0,static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___db_10)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___data_11)),};
+	static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___ui_4)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275_StaticFields, ___ins_5)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___type_6)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___cryptoData_7)),0,static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___db_9)),static_cast<int32_t>(offsetof(DataManager_tE86238CF20D1A233E0ADDA21C619896E5F278275, ___data_10)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3870[4] = 
 {
-	static_cast<int32_t>(offsetof(QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72, ___preview_4)),static_cast<int32_t>(offsetof(QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72, ___screenRect_5)),static_cast<int32_t>(offsetof(QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72, ___camTexture_6)),static_cast<int32_t>(offsetof(QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72, ___cryptoData_7)),};
+	static_cast<int32_t>(offsetof(QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72, ___preview_4)),static_cast<int32_t>(offsetof(QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72, ___screenRect_5)),static_cast<int32_t>(offsetof(QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72, ___camTexture_6)),static_cast<int32_t>(offsetof(QRScanner_tBB1D0EF9D016C14E01BF89F4AC4A2CBB083C3B72, ___readQRData_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3871[1] = 
 {
 	static_cast<int32_t>(offsetof(UI_t16DF663EF61FBCB2402111DB12E3091C775B4539, ___statusText_4)),};

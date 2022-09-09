@@ -10,7 +10,8 @@ public class QRScanner : MonoBehaviour
     private Rect screenRect;
     private WebCamTexture camTexture;
 
-    private string cryptoData;
+    private string readQRData;
+
 
     private void Start()
     {
@@ -35,9 +36,11 @@ public class QRScanner : MonoBehaviour
                 IBarcodeReader barcodeReader = new BarcodeReader();
                 var result = barcodeReader.Decode(camTexture.GetPixels32(), camTexture.width, camTexture.height);
 
-                if(result != null)
-                {
-                    Debug.Log(result.Text);
+                if(result != null && result.Text != readQRData)
+                {   
+                    readQRData = result.Text;
+                    DataManager.Ins.QRDataValidation(readQRData);
+                    return;
                 }
             }
             catch (System.Exception ex) 

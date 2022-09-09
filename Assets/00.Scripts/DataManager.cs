@@ -11,7 +11,6 @@ public class DataManager : MonoBehaviour
     [SerializeField] private UI ui;
     private static DataManager ins;
 
-    [SerializeField] private string testQRData = "AA.sad123sadDa123";
     [SerializeField] private string type = "";
     [SerializeField] private string cryptoData = "";
     [SerializeField] private const string DATE_STR = "yyyyMMddHHmmss";
@@ -51,15 +50,13 @@ public class DataManager : MonoBehaviour
     private void Start()
     {
         db = FirebaseFirestore.DefaultInstance;
-
-        QRDataValidation(testQRData);
     }
 
     /// <summary>
     /// QR데이터가 DB내에 있는 데이터인지 검사
     /// </summary>
     /// <param name="QRData">QR코드의 데이터</param>
-    private bool QRDataValidation(string QRData)
+    public bool QRDataValidation(string QRData)
     {
         // 데이터가 null이거나 길이가 2보다 작은경우 함수 종료
         if(QRData == null || QRData.Length < 2)

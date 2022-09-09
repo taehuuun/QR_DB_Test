@@ -58,10 +58,10 @@ extern void DataManager_QRDataValidation_m8C7D772592BC3C0ED37C24CF799D04ED0D9AC8
 extern void DataManager_LoadData_mC0336A80BFB7A03E3BD6751657CCADC7F720C90F (void);
 // 0x00000017 System.Void DataManager::.ctor()
 extern void DataManager__ctor_mD735B7F80F3DE13E2BB45118CDA7FA619330DCDA (void);
-// 0x00000018 System.Boolean DataManager::<QRDataValidation>b__12_0(System.Threading.Tasks.Task`1<Firebase.Firestore.DocumentSnapshot>)
-extern void DataManager_U3CQRDataValidationU3Eb__12_0_mF20B21848F3E6D1D5E5B6F3B245F53413674A2FB (void);
-// 0x00000019 System.Void DataManager::<LoadData>b__13_0(System.Threading.Tasks.Task`1<Firebase.Firestore.DocumentSnapshot>)
-extern void DataManager_U3CLoadDataU3Eb__13_0_mB74CD501F5AD5E505116B7EF58A2E75EB59E9467 (void);
+// 0x00000018 System.Boolean DataManager::<QRDataValidation>b__11_0(System.Threading.Tasks.Task`1<Firebase.Firestore.DocumentSnapshot>)
+extern void DataManager_U3CQRDataValidationU3Eb__11_0_m33D4D593657B7662E984ED954894ECA88D240E32 (void);
+// 0x00000019 System.Void DataManager::<LoadData>b__12_0(System.Threading.Tasks.Task`1<Firebase.Firestore.DocumentSnapshot>)
+extern void DataManager_U3CLoadDataU3Eb__12_0_m3B0B4A1E8325363836632B332A1ECD34AEDF3915 (void);
 // 0x0000001A System.Void QRScanner::Start()
 extern void QRScanner_Start_m9EB2BAB8B1B22E727F76AD2A6F435757C81B575B (void);
 // 0x0000001B System.Void QRScanner::Update()
@@ -625,8 +625,8 @@ static Il2CppMethodPointer s_methodPointers[294] =
 	DataManager_QRDataValidation_m8C7D772592BC3C0ED37C24CF799D04ED0D9AC827,
 	DataManager_LoadData_mC0336A80BFB7A03E3BD6751657CCADC7F720C90F,
 	DataManager__ctor_mD735B7F80F3DE13E2BB45118CDA7FA619330DCDA,
-	DataManager_U3CQRDataValidationU3Eb__12_0_mF20B21848F3E6D1D5E5B6F3B245F53413674A2FB,
-	DataManager_U3CLoadDataU3Eb__13_0_mB74CD501F5AD5E505116B7EF58A2E75EB59E9467,
+	DataManager_U3CQRDataValidationU3Eb__11_0_m33D4D593657B7662E984ED954894ECA88D240E32,
+	DataManager_U3CLoadDataU3Eb__12_0_m3B0B4A1E8325363836632B332A1ECD34AEDF3915,
 	QRScanner_Start_m9EB2BAB8B1B22E727F76AD2A6F435757C81B575B,
 	QRScanner_Update_m0ECE7939D5C01702796027AB74D1CEEE6298AB30,
 	QRScanner__ctor_mD757F709585362E2F9C7CD3A71592D36D147E003,
